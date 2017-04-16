@@ -42,6 +42,19 @@ $("#btnDetener").click(function () {
     clearInterval(interval);
 });
 
+$("#btnAgregar").click(function () {
+    $('<input>').attr({
+        type: 'text',
+        name: 'otros[]',
+        value: ''
+    }).appendTo('#otros');
+    store.subscribe(function () {
+        $("[name='otros[]']").each(function () {
+            $(this).val(store.getState());
+        });
+    });
+});
+
 /*
  * Anotaciones
  * Única fuente de la verdad
