@@ -1,19 +1,78 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="es">
+
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="js/redux.js"></script>
-      
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Redux</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
+
     <body>
-          <script type="text/javascript" src="js/scripts.js"></script>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        Redux
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img  class="img-responsive img-rounded" src="img/redux.png" alt="">
+                </div>
+                     <div class="col-md-6">
+
+                    <form class="form-horizontal" onsubmit="return false;">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend>Ejemplo Redux js Contador</legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="contador">Contador</label>  
+                                <div class="col-md-4">
+                                    <input readonly="" id="contador" name="contador" type="text" placeholder="" class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="btnInicio">Opciones</label>
+                                <div class="col-md-8">
+                                    <button id="btnInicio" name="button1id" class="btn btn-success">Iniciar</button>
+                                    <button id="btnReinicio" name="button1id" class="btn btn-success">Reiniciar</button>
+                                    <button id="btnDetener" name="button2id" class="btn btn-danger">Detener</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    Ejemplo Redux - Diseño de sitios Web UNA 2017
+                </div>
+            </footer>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/redux.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
-    
 </html>

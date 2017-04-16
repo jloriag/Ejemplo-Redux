@@ -1,8 +1,8 @@
+//Reductor-> Gestiona las acciones
 function counter(state, action) {
     if (typeof state == 'undefined') {
         state = 0;
     }
-
     switch (action.type) {
         case 'INCREMENT':
             state++;
@@ -10,24 +10,43 @@ function counter(state, action) {
         case 'DECREMENT':
             state--;
             break;
+        case 'RESET':
+            state = 0;
+            break;
     }
     return state;
 }
 
 function render() {
-    document.querySelector('body').innerHTML = store.getState();
+    $('#contador').val(store.getState());
 }
 
 var store = Redux.createStore(counter);
 store.subscribe(render);
 render();
 
-(function () {
-    setInterval(function () {
-        store.dispatch({type: 'DECREMENT'});
+$("#btnInicio").click(function () {
+    interval = setInterval(function () {
+        // Accion
+        store.dispatch({type: 'INCREMENT'});
     }, 1000);
-})();
-
-document.addEventListener('click', function () {
-    store.dispatch({type: 'INCREMENT'});
 });
+
+
+$("#btnReinicio").click(function () {
+    // Accion
+    store.dispatch({type: 'RESET'});
+});
+
+$("#btnDetener").click(function () {
+    clearInterval(interval);
+});
+
+/*
+ * Anotaciones
+ * Única fuente de la verdad
+ * Estado es de solo lectura
+ *  store.getState();
+ * 
+ * 
+ */
