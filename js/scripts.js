@@ -24,6 +24,7 @@ function render() {
 var store = Redux.createStore(counter);
 store.subscribe(render);
 render();
+var interval;
 
 $("#btnInicio").click(function () {
     interval = setInterval(function () {
